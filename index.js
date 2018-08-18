@@ -1,7 +1,7 @@
 import Web3 from 'web3'
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
-ISSUE_CANDY_COMMAND = '/home/pi/run.sh'
+const ISSUE_CANDY_COMMAND = '/home/pi/run.sh'
 
 
 // Issue candy command
