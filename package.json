@@ -1,5 +1,5 @@
 {
-  "name": "CandyVendingMachine",
+  "name": "candoreum",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,8 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "web3": "^1.0.0-beta.35"
   }
 }
