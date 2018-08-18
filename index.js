@@ -24,7 +24,7 @@ var subscription = web3.eth.subscribe('pendingTransactions')
 
     // Watch on incoming ether to 0x950807aeaccb5e66dc09e9f99a7d559a880d8b14
 		if (result.to.toLocaleLowerCase() === '0x950807aeaccb5e66dc09e9f99a7d559a880d8b14'.toLocaleLowerCase()) {
-      console.log('transaction: ' + transaction + ', to: ' + result.to)
+      console.log('from: ' + result.from + ' to: ' + result.to + ' tx: ' + transaction)
       issueCandy()
     }
   })
