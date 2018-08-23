@@ -13,8 +13,10 @@ async function issueCandy() {
 }
 
 // Initial web3
+// const web3 = new Web3('wss://mainnet.infura.io/_ws')
 // const web3 = new Web3('wss://ropsten.infura.io/_ws')
-const web3 = new Web3('ws://139.5.144.137:8546')
+// const web3 = new Web3('wss://rinkeby.infura.io/_ws')
+const web3 = new Web3('wss://pzcethnode.afourleaf.com:28546')
 
 // Subsribe to pending transaciton
 var subscription = web3.eth.subscribe('pendingTransactions')
