@@ -13,7 +13,8 @@ async function issueCandy() {
 }
 
 // Initial web3
-const web3 = new Web3('wss://ropsten.infura.io/_ws')
+// const web3 = new Web3('wss://ropsten.infura.io/_ws')
+const web3 = new Web3('ws://139.5.144.137:8546')
 
 // Subsribe to pending transaciton
 var subscription = web3.eth.subscribe('pendingTransactions')
@@ -23,6 +24,7 @@ var subscription = web3.eth.subscribe('pendingTransactions')
       return
     }
 
+    // console.log('from: ' + result.from + ' to: ' + result.to + ' tx: ' + transaction)
     // Watch on incoming ether to 0x950807aeaccb5e66dc09e9f99a7d559a880d8b14
 		if (result.to.toLocaleLowerCase() === RECEIVER_ADDRESS.toLocaleLowerCase()) {
       console.log('from: ' + result.from + ' to: ' + result.to + ' tx: ' + transaction)
