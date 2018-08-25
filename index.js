@@ -16,8 +16,8 @@ async function issueCandy() {
 // const web3 = new Web3('wss://mainnet.infura.io/_ws')
 // const web3 = new Web3('wss://ropsten.infura.io/_ws')
 // const web3 = new Web3('wss://rinkeby.infura.io/_ws')
-// const web3 = new Web3('wss://pzcethnode.afourleaf.com:28546')
-const web3 = new Web3('wss://kovan.infura.io/ws')
+const web3 = new Web3('wss://pzcethnode.afourleaf.com:28546')
+// const web3 = new Web3('wss://kovan.infura.io/ws')
 
 // Subsribe to pending transaciton
 var subscription = web3.eth.subscribe('pendingTransactions')
