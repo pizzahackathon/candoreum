@@ -1,7 +1,7 @@
 import Web3 from 'web3'
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
-const ISSUE_CANDY_COMMAND = '/home/pi/run.sh'
+const ISSUE_CANDY_COMMAND = './issue_candy.sh'
 const RECEIVER_ADDRESS = '0x7357c4eb39e8e7c4d66635e2d76b343be759c88b'
 
 

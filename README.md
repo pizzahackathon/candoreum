@@ -12,6 +12,10 @@ Allow user to send ETH Testnet on their wallet to pay for candy.
   </a>
 </p>
 
+# Setup
+Configure IR Transmiter with this http://www.lirc.org/html/lircd.conf.html
+** Learn IR with your remote control.
+
 # Run it
 - npm install
 - npm run start
