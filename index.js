@@ -1,7 +1,7 @@
 import Web3 from 'web3'
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
-const ISSUE_CANDY_COMMAND = '/home/pi/run.sh'
+const ISSUE_CANDY_COMMAND = './issue_candy.sh'
 const RECEIVER_ADDRESS = '0x7357c4eb39e8e7c4d66635e2d76b343be759c88b'
 
 
@@ -17,7 +17,7 @@ async function issueCandy() {
 // const web3 = new Web3('wss://ropsten.infura.io/_ws')
 // const web3 = new Web3('wss://rinkeby.infura.io/_ws')
 const web3 = new Web3('wss://pzcethnode.afourleaf.com:28546')
-// const web3 = new Web3('wss://kovan.infura.io/ws')
+//const web3 = new Web3('wss://kovan.infura.io/ws')
 
 // Subsribe to pending transaciton
 var subscription = web3.eth.subscribe('pendingTransactions')
