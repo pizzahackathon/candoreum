@@ -110,7 +110,7 @@ async function checkReceiveNewERC20 () {
   let currentBlockHeight = await web3.eth.getBlockNumber()
 
   // No need to fetch when no new block
-  if (latestFetchBlockHeight + 1 >= currentBlockHeight) {
+  if (latestFetchBlockHeight + 1 > currentBlockHeight) {
     setTimeout(() => {
       checkReceiveNewERC20()
     }, 1000)
