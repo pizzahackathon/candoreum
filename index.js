@@ -124,6 +124,12 @@ async function checkReceiveNewERC20 () {
     }).then(events => {
       // Got new Thai baht
       console.log(`${events.length} ${latestFetchBlockHeight} -> ${currentBlockHeight}`) // same results as the optional callback above
+
+      // issue candy if any payment found
+      if (events.length >= 1) {
+        issueCandy()
+      }
+
       latestFetchBlockHeight = currentBlockHeight
       setTimeout(() => {
         checkReceiveNewERC20()
