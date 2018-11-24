@@ -102,7 +102,7 @@ async function issueCandy() {
 
 async function startCheckingERC20 () {
   let currentBlockHeight = await web3.eth.getBlockNumber()
-  latestFetchBlockHeight = currentBlockHeight
+  latestFetchBlockHeight = currentBlockHeight - 1
   checkReceiveNewERC20()
 }
 
@@ -110,7 +110,7 @@ async function checkReceiveNewERC20 () {
   let currentBlockHeight = await web3.eth.getBlockNumber()
 
   // No need to fetch when no new block
-  if (latestFetchBlockHeight === currentBlockHeight) {
+  if (latestFetchBlockHeight + 1 >= currentBlockHeight) {
     setTimeout(() => {
       checkReceiveNewERC20()
     }, 1000)
@@ -119,7 +119,7 @@ async function checkReceiveNewERC20 () {
       filter: {
         to: '0x7357c4eb39e8e7c4d66635e2d76b343be759c88b'
       },
-      fromBlock: latestFetchBlockHeight,
+      fromBlock: latestFetchBlockHeight + 1,
       toBlock: currentBlockHeight
     }).then(events => {
       // Got new Thai baht
