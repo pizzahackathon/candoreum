@@ -8,7 +8,7 @@ const enableERC20Receiver = true
 
 let erc20 = null
 const erc20Address = '0x795cf7655ee5a0498b411fcaf69d1ce66b638369'
-const latestFetchBlockHeight = 3397268
+let latestFetchBlockHeight = 3397268
 const erc20Abi = [
   {
     'constant': true,
