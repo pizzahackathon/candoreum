@@ -7,84 +7,9 @@ const RECEIVER_ADDRESS = '0x7357c4eb39e8e7c4d66635e2d76b343be759c88b'
 const enableERC20Receiver = true
 
 let erc20 = null
-const erc20Address = '0x795cf7655ee5a0498b411fcaf69d1ce66b638369'
+const erc20Address = '0x10be9de395276482721e102de303316a384c0c9b'
 let latestFetchBlockHeight = 3397268
-const erc20Abi = [
-  {
-    'constant': true,
-    'inputs': [],
-    'name': 'totalSupply',
-    'outputs': [
-      {
-        'name': '',
-        'type': 'uint256'
-      }
-    ],
-    'payable': false,
-    'stateMutability': 'view',
-    'type': 'function'
-  },
-  {
-    'constant': true,
-    'inputs': [
-      {
-        'name': '_owner',
-        'type': 'address'
-      }
-    ],
-    'name': 'balanceOf',
-    'outputs': [
-      {
-        'name': 'balance',
-        'type': 'uint256'
-      }
-    ],
-    'payable': false,
-    'stateMutability': 'view',
-    'type': 'function'
-  },
-  {
-    'constant': false,
-    'inputs': [
-      {
-        'name': '_to',
-        'type': 'address'
-      },
-      {
-        'name': '_value',
-        'type': 'uint256'
-      }
-    ],
-    'name': 'transfer',
-    'outputs': [],
-    'payable': false,
-    'stateMutability': 'nonpayable',
-    'type': 'function'
-  },
-  {
-    'anonymous': false,
-    'inputs': [
-      {
-        'indexed': true,
-        'name': 'from',
-        'type': 'address'
-      },
-      {
-        'indexed': true,
-        'name': 'to',
-        'type': 'address'
-      },
-      {
-        'indexed': false,
-        'name': 'value',
-        'type': 'uint256'
-      }
-    ],
-    'name': 'Transfer',
-    'type': 'event'
-  }
-]
-
+const erc20Abi = require('./erc20abi.json')
 
 // Initial web3
 // const web3 = new Web3('wss://mainnet.infura.io/_ws')
