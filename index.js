@@ -89,9 +89,9 @@ const erc20Abi = [
 // Initial web3
 // const web3 = new Web3('wss://mainnet.infura.io/_ws')
 // const web3 = new Web3('wss://ropsten.infura.io/_ws')
-const web3 = new Web3('wss://rinkeby.infura.io/_ws')
-// const web3 = new Web3('wss://pzcethnode.afourleaf.com:28546')
-// const web3 = new Web3('wss://kovan.infura.io/ws')
+// const web3 = new Web3('wss://rinkeby.infura.io/_ws')
+const web3 = new Web3('wss://kovan.infura.io/ws')
+// const web3 = new Web3('https://public-node.testnet.rsk.co/')
 
 // Issue candy command, use IR transmit to send signal to candy machine.
 async function issueCandy() {
@@ -122,8 +122,8 @@ async function checkReceiveNewERC20 () {
       fromBlock: latestFetchBlockHeight + 1,
       toBlock: currentBlockHeight
     }).then(events => {
-      // Got new Thai baht
-      console.log(`${events.length} ${latestFetchBlockHeight} -> ${currentBlockHeight}`) // same results as the optional callback above
+      // Received ERC20 from new blocks
+      console.log(`found ${events.length} txs in blocks ${latestFetchBlockHeight} - ${currentBlockHeight}`) // same results as the optional callback above
 
       // issue candy if any payment found
       if (events.length >= 1) {
